@@ -130,7 +130,7 @@ function handleErrors(response){
 function clickRun(){
 	clearLinks();
 	//fetch new links
-	fetch('http://54.177.254.193/routing',
+	fetch(new myEnvironment().getRoutingUrl(),
 	{   method: 'POST',
 		headers: new Headers(
 		{

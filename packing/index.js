@@ -1,5 +1,4 @@
 (()=>{
-
 	//d3js
 	let svg = d3.select("svg"),
 		svgwidth = svg.attr("width"),
@@ -207,8 +206,8 @@
 		return response;
 	}
 	function clickRun(){
-		//fetch new links
-		fetch('http://54.177.254.193/packing',
+		//fetch new product bin locations
+		fetch(new myEnvironment().getPackingUrl(),
 		{   method: 'POST',
 			headers: new Headers(
 			{
@@ -235,4 +234,4 @@
 		let radius = Math.sqrt(area/Math.PI);
 		return radius*scale-padding;//extra space for padding
 	}
-	})();
+})();
